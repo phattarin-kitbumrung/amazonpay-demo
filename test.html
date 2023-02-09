@@ -1,0 +1,27 @@
+<body>
+    <div id="AmazonPayButton"></div>
+    <script src="https://static-fe.payments-amazon.com/checkout.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        amazon.Pay.renderButton('#AmazonPayButton', {
+            // set checkout environment
+            merchantId: 'A22BRR4RHT6APN',
+            ledgerCurrency: 'JPY',
+            sandbox: true,               
+            // customize the buyer experience
+            checkoutLanguage: 'ja_JP',
+            productType: 'SignIn',
+            placement: 'Cart',
+            buttonColor: 'Gold',
+            // configure sign in
+            signInConfig: {                     
+                payloadJSON: {
+                    signInReturnUrl: "https://www.google.co.th/",
+                    storeId: "amzn1.application-oa2-client.1ea5f3a479854050a887031ef6a73b78",
+                    signInScopes: ["name", "email", "postalCode", "shippingAddress", "phoneNumber"]
+                },
+                signature: 'aDWuEjsmA3PTR3rfuJbe9N72xlst9/LGKUm0/TkUqMBJOgrk76ODxoNd5KJ4EmubMOkPxcgMiJFpSBdmcF9usOGKePXuxKthLYUdb1uHFKfLupSjmiZb/9akjBJaLGvIGFQsrHaiYeI4bdTyZhoJI/4xC4v92jbLOS3wc6LlXRI/qcJffwiKeHR8hzOFzYa9koCLyZHHG1AL9GvlyUd5CKD9i/kkfVYNNFpIowR2htph7pu6C09RzALqnLWN7sMHHmwWxPC5/kqBP9v5M7M4LMs4n8PZao6PYi8H10bTorj6afeFijEWkzifVOoB1AEiyy9g8l0A1CZn63IgWgUV+g==',
+                publicKeyId: 'AFJPZIKODGQMUOOTWWROW2R4' 
+            } 
+        });
+    </script>
+</body>
